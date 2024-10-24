@@ -1,0 +1,1 @@
+/*npm init--> package.json --> description of the project*/

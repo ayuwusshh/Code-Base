@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        .card{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border: 2px solid black;
+            width: 900px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .image img{
+            width: 200px;
+        }
+        .text h1,.text p{
+            padding: 2px, 0;
+        }
+        .image{
+            position: relative;
+        }
+        .image .capsule{
+            position: absolute;
+            bottom: 4px;
+            right: 5px;
+            background-color: #242020;
+            opacity: 0.9;
+            color: white;
+            padding: 3px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw">
+                <div class="capsule">31:20</div>
+            </div>
+            <div class="text">
+                <h1>Installing VS Code & How Websites Work</h1>
+                <p>CodeWithHarry . 2.4M views . 11 months ago</p>
+            </div>
+        </div>
+    </div>
+    <script src="prac.js"></script>
+</body>
+</html>
