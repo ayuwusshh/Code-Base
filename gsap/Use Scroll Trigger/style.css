@@ -3,14 +3,14 @@
   padding: 10;
   box-sizing: border-box;
   font-family: gilroy;
-  /* color: white; */
+  color: black;
 }
 html,
 body {
   height: 100%;
   width: 100%;
 }
-#page1{
+/* #page1 {
   height: 100%;
   width: 100%;
   background-color: lightblue;
@@ -18,27 +18,64 @@ body {
   align-items: center;
   justify-content: center;
 }
-#page2{
+#page2 {
   height: 100%;
   width: 100%;
   background-color: rgb(39, 196, 248);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 50px;
 }
-#page3{
+#page3 {
   height: 100%;
   width: 100%;
-  background-color: rgb(8, 130,191);
+  background-color: rgb(8, 130, 191);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#box{
+#box {
   height: 300px;
   width: 300px;
   background-color: crimson;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+h1 {
+  font-size: 60px;
+  position: relative;
+  background-color: red;
+  padding: 10px;
+}
+h2 {
+  padding: 10px;
+  font-size: 60px;
+  position: relative;
+  background-color: yellow;
+} */
+body {
+  overflow-x: hidden;
+}
+#page1 {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+#page2 {
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  padding: 5vw 0;
+}
+#page3 {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+#page2 h1 {
+  font-size: 35vw;
+  text-transform: uppercase;
 }
