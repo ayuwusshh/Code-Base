@@ -13,8 +13,8 @@ const server = http.createServer(function (req, res) {
 
     res.write('</form>')
     res.write('</body>');
-    res.write('<html>');
-    res.end();
+    res.write('</html>');
+    return res.end();
   }
   else {
     res.setHeader('Content-Type', 'text/html')
