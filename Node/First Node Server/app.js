@@ -3,6 +3,10 @@ const server = http.createServer(function (req, res) {
   // console.log('Request Headers:', req.headers);
   console.log(req.url, req.method, req.headers);
   // process.exit();
+  res.setHeader('Content-Type','text/html')
+  res.write('<html>');
+  
+  res.write('<html>');
 });
 const PORT = 3000;
 server.listen(PORT, () => {
