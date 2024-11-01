@@ -18,12 +18,14 @@ const server = http.createServer(function (req, res) {
     res.write('<html>');
     return res.end();
   }
-  res.setHeader('Content-Type', 'text/html')
-  res.write('<html>');
-  res.write('<head><title>Ayush SIngh Rajput</title></head>');
-  res.write('<body><h1>Welcome</h1></body>');
-  res.write('<html>');
-  return res.end();
+  else {
+    res.setHeader('Content-Type', 'text/html')
+    res.write('<html>');
+    res.write('<head><title>Ayush SIngh Rajput</title></head>');
+    res.write('<body><h1>Welcome</h1></body>');
+    res.write('<html>');
+    return res.end();
+  }
 });
 const PORT = 3000;
 server.listen(PORT, () => {
