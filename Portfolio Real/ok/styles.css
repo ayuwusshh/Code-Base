@@ -94,7 +94,7 @@ nav ul li a:hover {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -320,14 +320,12 @@ footer {
   .about-content {
     flex-direction: column;
     text-align: center;
-    
   }
 
   .profile-image {
     width: 200px;
     height: 200px;
     margin-left: 30px;
-
   }
 
   nav ul {
