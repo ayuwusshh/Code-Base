@@ -92,9 +92,11 @@ nav ul li a:hover::after {
 nav ul li a:hover {
   color: var(--accent-color);
 }
-
+#home{
+  margin-top: 90px;
+}
 section {
-  min-height: 50vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,11 +127,15 @@ h3 {
   font-size: 1.5rem;
   color: var(--secondary-color);
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .line {
   display: block;
   overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .about-content {
@@ -168,7 +174,9 @@ h3 {
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.skill-category h3{
+  text-align: start;
+}
 .skill-category:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(160, 160, 160, 0.1);
@@ -320,12 +328,14 @@ footer {
   .about-content {
     flex-direction: column;
     text-align: center;
+    
   }
 
   .profile-image {
     width: 200px;
     height: 200px;
     margin-left: 30px;
+
   }
 
   nav ul {
