@@ -213,9 +213,14 @@ h3 {
 
 .project {
   background-color: var(--dark-grey);
-  padding: 30px;
+  padding: 10px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project h3 {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .project:hover {
