@@ -11,7 +11,7 @@ document.addEventListener('mousemove', (e) => {
 gsap.from("#home h1 .line", {
     y: 200,
     opacity: 0,
-    duration: 1,
+    duration: 2,
     stagger: 0.25,
     ease: "power3.out",
 });
@@ -19,7 +19,7 @@ gsap.from("#home h1 .line", {
 gsap.from(".subtitle", {
     opacity: 0,
     y: 20,
-    duration: 1,
+    duration: 1.5,
     delay: 1,
     ease: "power3.out",
 });
