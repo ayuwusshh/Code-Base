@@ -16,8 +16,6 @@ Create Table Doctorr(
     YearsOfExperience Number(2) ,
     PhoneNum VARCHAR2(15)
 );
-
-
 Create Table Patientt(
     SSN Number(5) PRIMARY KEY,
     FirstName VARCHAR2(20) NOT NULL,
@@ -85,6 +83,12 @@ VALUES ('Amoxicillin', 80.00, 'No');
 INSERT INTO Medicine (TradeName, UnitPrice, GenericFlag)
 VALUES ('Ibuprofen', 25.00, 'Yes');
 
+select DISTINCT P.PATIENT_SSN
+from PRESCRIPTION P
+join PRESCRIPTION_MEDICINE pm on P.ID=pm.PRESCRIPTIONID
+join DOCTOR d on p.Doctor_SSN=d.SSN
+where d.FIRSTNAME ='John' and d.LASTNAME ='Smith';
+
 
 INSERT INTO Prescription (Id, Pr_Date, Doctor_SSN, Patient_SSN)
 VALUES (30001, TO_DATE('2024-10-01', 'YYYY-MM-DD'), 10001, 20001);
@@ -131,6 +135,7 @@ select P.FirstName,P.LastName
 from PATIENT P
 join DOCTOR D on P.PRIMARYDOCTOR_SSN=D.SSN
 where D.FIRSTNAME='John' and D.LASTNAME='Smith';
+
 select *from doctor;
 
 SELECT FirstName,LastName
@@ -156,5 +161,6 @@ SELECT P.FIRSTNAME,P.LASTNAME
 from patient p
 join PRESCRIPTION pr on p.SSN = pr.PATIENT_SSN 
 where pr.DOCTOR_SSN in (SELECT PRIMARYDOCTOR_SSN from PATIENT);
+
 
 COMMIT;
