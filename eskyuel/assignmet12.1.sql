@@ -77,3 +77,5 @@ from HOTEL;
 
 SELECT AVG(Price) as avg_price
 from ROOM;
+
+select DISTINCT()
