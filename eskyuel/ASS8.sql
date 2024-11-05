@@ -44,6 +44,7 @@ create table Prescription_Medicine(
     NumOfUnits NUMBER
 );
 
+
 Commit;
 
 INSERT INTO Doctor (SSN, FirstName, LastName, Specialty, YearsOfExperience, PhoneNum)
