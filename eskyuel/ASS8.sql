@@ -167,6 +167,4 @@ from patient p
 where not EXISTS(
     select 1 from Prescription pr
     where pr.Patient_SSN=p.SSN and pr.DOCTOR_SSN !=p.PRIMARYDOCTOR_SSN
-) ;
-
-COMMIT;
+);
