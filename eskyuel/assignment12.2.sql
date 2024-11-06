@@ -45,7 +45,7 @@ CREATE TABLE PROJECT (
     DNo INT,
     FOREIGN KEY (DNo) REFERENCES DEPARTMENT(DNo) ON DELETE SET NULL
 );
-insert into PROJECT values(000,'Database Management','Iraq',1);
+insert into PROJECT values(000,'Iot','Iraq',1);
 insert into PROJECT values(001,'System Management','Netherlands',3);
 insert into PROJECT values(002,'Accounts Management','Pakistan',5);
 insert into PROJECT values(003,'Finance Management','Syria',4);
@@ -60,8 +60,29 @@ CREATE TABLE WORKS_ON (
     FOREIGN KEY (PNo) REFERENCES PROJECT(PNo) ON DELETE CASCADE
 );
 
-INSERT into WORKS_ON values('E101',000,8);
-INSERT into WORKS_ON values('E101',000,8);
-INSERT into WORKS_ON values('E101',000,8);
-INSERT into WORKS_ON values('E101',000,8);
-INSERT into WORKS_ON values('E101',000,8);
+INSERT INTO WORKS_ON VALUES('E101', 0, 20.5);
+INSERT INTO WORKS_ON VALUES('E102', 001, 30.0);
+INSERT INTO WORKS_ON VALUES('E103', 002, 15.0);
+INSERT INTO WORKS_ON VALUES('E104', 003, 25.0);
+INSERT INTO WORKS_ON VALUES('E105', 004, 18.5);
+INSERT INTO WORKS_ON VALUES('E102', 000, 22.0);
+
+
+select DISTINCT p.PNo
+from PROJECT p    
+join WORKS_ON w on w.PNO=p.PNO
+join EMPLOYEE e on e.SSN=w.SSN
+where e.LNAME='Scott'
+UNION
+select DISTINCT p.PNo
+from PROJECT p
+join DEPARTMENT d on d.DNO=p.PNO
+join EMPLOYEE e on e.SSN=d.MGRSSN
+where e.LNAME='Scott';
+
+SELECT e.ssn,e.fName,e.lname,e.Salary*1.10 as sal
+from EMPLOYEE e    
+JOIN DEPARTMENT d on d.DNO=e.DNO
+join PROJECT p on p.DNO=d.DNO
+where p.Pname='IoT'
+;
