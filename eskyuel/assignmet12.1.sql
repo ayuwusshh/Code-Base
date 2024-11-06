@@ -19,14 +19,15 @@ CREATE TABLE Room (
     FOREIGN KEY (Hotel_No) REFERENCES Hotel(Hotel_No) ON DELETE CASCADE
 );
 
-INSERT INTO ROOM VALUES(001,101,'double','£30.00');
-INSERT INTO ROOM VALUES(002,102,'family','£50.00');
-INSERT INTO ROOM VALUES(003,103,'family','£30.00');
-INSERT INTO ROOM VALUES(004,104,'double','£10.00');
-INSERT INTO ROOM VALUES(005,105,'double','£40.00');
-INSERT INTO Room VALUES (006, 106, 'family', 35);
-
-
+INSERT INTO ROOM VALUES(001,101,'double',30.00);
+INSERT INTO ROOM VALUES(002,102,'family',50.00);
+INSERT INTO ROOM VALUES(003,103,'family',30.00);
+INSERT INTO ROOM VALUES(004,104,'double',10.00);
+INSERT INTO Room VALUES (007, 101, 'family',51.00);
+INSERT INTO ROOM VALUES(005,105,'double',40.00);
+INSERT INTO Room VALUES (006, 106, 'family',35.00);
+INSERT INTO Room VALUES (008, 101, 'doubble',65.00);
+select * from room;
 
 CREATE TABLE Guest (
     Guest_No INT PRIMARY KEY,
@@ -78,4 +79,16 @@ from HOTEL;
 SELECT AVG(Price) as avg_price
 from ROOM;
 
-select DISTINCT()
+SELECT * 
+FROM Room r
+JOIN Booking b ON b.Room_No = r.Room_No AND b.Hotel_No = r.Hotel_No
+JOIN Guest g ON g.Guest_No = b.Guest_No
+JOIN Hotel h ON h.Hotel_No = b.Hotel_No
+WHERE h.Name = 'Residency Hotel';
+
+SELECT * 
+FROM Room r
+JOIN Booking b ON b.Room_No = r.Room_No AND b.Hotel_No = r.Hotel_No
+JOIN Guest g ON g.Guest_No = b.Guest_No
+JOIN Hotel h ON h.Hotel_No = b.Hotel_No
+WHERE h.Name = 'Residency Hotel';
