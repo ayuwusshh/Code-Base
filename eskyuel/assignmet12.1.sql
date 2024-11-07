@@ -92,3 +92,5 @@ JOIN Booking b ON b.Room_No = r.Room_No AND b.Hotel_No = r.Hotel_No
 JOIN Guest g ON g.Guest_No = b.Guest_No
 JOIN Hotel h ON h.Hotel_No = b.Hotel_No
 WHERE h.Name = 'Residency Hotel';
+
+select * from lawda;
