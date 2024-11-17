@@ -10,7 +10,7 @@ function updateChart(chart, data) {
 // Create a Chart.js chart
 const ctx = document.getElementById('studyChart').getContext('2d');
 const studyChart = new Chart(ctx, {
-  type: 'bar',
+  type: 'line',
   data: {
     labels: [], // Will be filled dynamically
     datasets: [{
@@ -18,13 +18,36 @@ const studyChart = new Chart(ctx, {
       data: [], // Will be filled dynamically
       backgroundColor: 'rgba(40, 167, 69, 0.5)',
       borderColor: 'rgba(40, 167, 69, 1)',
-      borderWidth: 1
+      borderWidth: 2,
+      fill: true,
+      tension: 0.4 // This creates a wave-like effect
     }]
   },
   options: {
+    responsive: true,
     scales: {
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Hours'
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Date'
+        }
+      }
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+      },
+      tooltip: {
+        mode: 'index',
+        intersect: false,
       }
     }
   }
@@ -41,6 +64,7 @@ studySessions.forEach(session => {
 // Update the chart with existing data
 updateChart(studyChart, studySessions);
 
+// Handle form submission
 document.getElementById('studyForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
