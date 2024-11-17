@@ -1,93 +1,63 @@
-const studySessions = JSON.parse(localStorage.getItem('studySessions')) || [];
+// Get references to the DOM elements
+const studyForm = document.getElementById('studyForm');
+const studyList = document.getElementById('studyList');
+const studyChart = document.getElementById('studyChart');
+
+let studyData = []; // Array to hold study session data
 
 // Function to update the chart
-function updateChart(chart, data) {
-  chart.data.labels = data.map(session => session.date);
-  chart.data.datasets[0].data = data.map(session => session.hours);
-  chart.update();
-}
+function updateChart() {
+  const labels = studyData.map(session => session.date);
+  const data = studyData.map(session => session.hours);
 
-// Create a Chart.js chart
-const ctx = document.getElementById('studyChart').getContext('2d');
-const studyChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: [], // Will be filled dynamically
-    datasets: [{
-      label: 'Hours Studied',
-      data: [], // Will be filled dynamically
-      backgroundColor: 'rgba(40, 167, 69, 0.5)',
-      borderColor: 'rgba(40, 167, 69, 1)',
-      borderWidth: 2,
-      fill: true,
-      tension: 0.4 // This creates a wave-like effect
-    }]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-        title: {
-          display: true,
-          text: 'Hours'
-        }
-      },
-      x: {
-        title: {
-          display: true,
-          text: 'Date'
-        }
-      }
+  const ctx = studyChart.getContext('2d');
+  if (window.studyChartInstance) {
+    window.studyChartInstance.destroy(); // Destroy previous instance if it exists
+  }
+
+  window.studyChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: 'Study Hours',
+        data: data,
+        backgroundColor: 'rgba(243, 156, 18, 0.6)',
+        borderColor: 'rgba(243, 156, 18, 1)',
+        borderWidth: 1
+      }]
     },
-    plugins: {
-      legend: {
-        display: true,
-        position: 'top',
-      },
-      tooltip: {
-        mode: 'index',
-        intersect: false,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
       }
     }
-  }
-});
+  });
+}
 
-// Load existing study sessions into the list and chart
-studySessions.forEach(session => {
-  const studyList = document.getElementById('studyList');
-  const listItem = document.createElement('li');
-  listItem.textContent = `${session.date} - ${session.subject}: ${session.hours} hours. Notes: ${session.notes}`;
-  studyList.appendChild(listItem);
-});
+// Event listener for form submission
+studyForm.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
 
-// Update the chart with existing data
-updateChart(studyChart, studySessions);
-
-// Handle form submission
-document.getElementById('studyForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
+  // Get form values
   const date = document.getElementById('date').value;
   const subject = document.getElementById('subject').value;
   const hours = parseFloat(document.getElementById('hours').value);
   const notes = document.getElementById('notes').value;
 
   // Add the new study session to the array
-  studySessions.push({ date, subject, hours, notes });
-
-  // Save to Local Storage
-  localStorage.setItem('studySessions', JSON.stringify(studySessions));
+  studyData.push({ date, subject, hours, notes });
 
   // Update the study list
-  const studyList = document.getElementById('studyList');
   const listItem = document.createElement('li');
-  listItem.textContent = `${date} - ${subject}: ${hours} hours. Notes: ${notes}`;
+  listItem.textContent = `${date} - ${subject}: ${hours} hours`;
   studyList.appendChild(listItem);
 
-  // Update the chart with the new data
-  updateChart(studyChart, studySessions);
+  // Update the chart
+  updateChart();
 
   // Clear the form
-  this.reset();
+  studyForm.reset();
 });

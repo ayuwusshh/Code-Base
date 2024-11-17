@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif; /* Font family */
+  font-family: "Roboto", sans-serif; /* Font family */
   background-color: #1e1e2f; /* Dark background */
   color: #ffffff; /* Light text color */
   margin: 0;
@@ -26,14 +26,17 @@ form {
   flex-direction: column;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
   margin: 10px 0;
   padding: 10px;
   border: none;
   border-radius: 5px;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: #3a3a4f; /* Input background */
   color: #ffffff; /* Input text color */
   font-size: 1em; /* Responsive font size */
@@ -73,29 +76,33 @@ button:hover {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .container {
-      padding: 15px; /* Reduce padding on smaller screens */
+    padding: 15px; /* Reduce padding on smaller screens */
   }
 
   h1 {
-      font-size: 1.5em; /* Smaller title font size */
+    font-size: 1.5em; /* Smaller title font size */
   }
 
-  input, textarea, button {
-      font-size: 0.9em; /* Slightly smaller font size */
+  input,
+  textarea,
+  button {
+    font-size: 0.9em; /* Slightly smaller font size */
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-      font-size: 1.2em; /* Even smaller title font size */
+    font-size: 1.2em; /* Even smaller title font size */
   }
 
-  input, textarea, button {
-      font-size: 0.8em; /* Smaller font size for mobile */
-      padding: 8px; /* Reduce padding for inputs */
+  input,
+  textarea,
+  button {
+    font-size: 0.8em; /* Smaller font size for mobile */
+    padding: 8px; /* Reduce padding for inputs */
   }
 
   #studyChart {
-      margin-top: 15px; /* Adjust margin for smaller screens */
+    margin-top: 15px; /* Adjust margin for smaller screens */
   }
 }
