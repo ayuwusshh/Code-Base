@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Progress Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Study Progress Tracker</h1>
+    <form id="studyForm">
+      <input type="date" id="date" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+      <input type="number" id="hours" placeholder="Hours Studied" required>
+      <textarea id="notes" placeholder="Notes"></textarea>
+      <button type="submit">Add Study Session</button>
+    </form>
+    <h2>Study Sessions</h2>
+    <ul id="studyList"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
