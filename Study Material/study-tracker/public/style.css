@@ -42,6 +42,12 @@ textarea {
   font-size: 1em; /* Responsive font size */
 }
 
+textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  overflow: auto; /* Show scrollbars if content overflows */
+  max-height: 150px; /* Set a maximum height for the textarea */
+}
+
 button {
   background-color: #f39c12; /* Button background */
   color: white;
