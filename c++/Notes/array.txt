@@ -1,0 +1,1 @@
+Size of n+1 arraY=(N+1)(N+2)/2
