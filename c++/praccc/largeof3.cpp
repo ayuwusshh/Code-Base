@@ -1,15 +1,15 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-  int sum = 0;
-  int a[] = {1, 2, 3, 4, 5};
-  int n = sizeof(a) / sizeof(a[0]);
-  for (int i = 0; i < n; i++)
+  vector<string> arr = {"h", "s", "u", "y", "A"};
+  reverse(arr.begin(), arr.end());
+  for (const string &s : arr)
   {
-    sum += a[i];
+    cout << s<<" ";
   }
-  cout << sum;
   return 0;
 }
