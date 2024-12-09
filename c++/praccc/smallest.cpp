@@ -15,7 +15,8 @@ int main()
     {
       minIndex = i;
     }
-    if (arr[i] > arr[maxIndex])
+
+    i (ar[i] > arr[maxIndex])
     {
       maxIndex = i;
     }
