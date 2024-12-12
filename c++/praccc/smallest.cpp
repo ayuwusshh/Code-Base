@@ -14,5 +14,6 @@ int main(){
       max=i;
     }
   }
-  
+  cout<<"Max index :"<<max<<endl;
+  cout<<"Min index :"<<min;
 }
