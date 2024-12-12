@@ -1,29 +1,18 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-
-int main()
-{
-  int n = 5;
-  int arr[] = {5, 11, 2, -8, 7};
-
-  int minIndex = 0;
-  int maxIndex = 0;
-
-  for (int i = 1; i < n; i++)
+int main(){
+  int arr[]={2,4,0,-5,8,17,3,6};
+  int n=8;
+  int max=0;
+  int min=0;
+  for (int i = 0; i < n; i++)
   {
-    if (arr[i] < arr[minIndex])
-    {
-      minIndex = i;
+    if(arr[i]<arr[min]){
+      min=i;
     }
-
-    if (arr[i] > arr[maxIndex])
-    {
-      maxIndex = i;
+    if(arr[i]>arr[max]){
+      max=i;
     }
   }
-
-  cout << "Index of minimum element: " << minIndex << endl;
-  cout << "Index of maximum element: " << maxIndex << endl;
-
-  return 0;
+  
 }
