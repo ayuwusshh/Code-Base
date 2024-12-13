@@ -41,5 +41,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "regex": "cpp"
-    }
+    },
+    "liveServer.settings.port": 5501
 }
