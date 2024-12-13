@@ -1,6 +1,6 @@
-/*
 
-brute force
+
+//brute force
 
 #include <iostream>
 using namespace std;
@@ -22,7 +22,4 @@ int main()
   return 0;
 }
 
-*/
-
-// kadane's algorithm
 
