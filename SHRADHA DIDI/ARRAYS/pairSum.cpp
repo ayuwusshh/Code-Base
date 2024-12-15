@@ -89,6 +89,6 @@ int main()
   vector<int> nums = {2, 7, 11, 15};
   int target = 13;
   vector<int> ans = pairSum(nums, target);
-  cout << ans[0] << ", " << ans[1] << endl;
+  cout << ans[0] << " " << ans[1] << endl;
   return 0;
 }
