@@ -5,11 +5,11 @@ using namespace std;
 
 int main()
 {
-  vector<string> arr = {"h", "s", "u", "y", "A"};
+  vector<string> arr = {"h", "s", "u", "y", "A", "O"};
   reverse(arr.begin(), arr.end());
   for (const string &s : arr)
   {
-    cout << s<<" ";
+    cout << s << " and  ";
   }
   return 0;
 }
