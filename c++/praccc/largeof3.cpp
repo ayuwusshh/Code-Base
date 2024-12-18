@@ -9,7 +9,7 @@ int main()
   reverse(arr.begin(), arr.end());
   for (const string &s : arr)
   {
-    cout << s << " and  ";
+    cout << s << " ";
   }
   return 0;
 }
