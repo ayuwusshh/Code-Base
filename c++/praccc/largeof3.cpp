@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-  vector<string> arr = {"h", "s", "u", "y", "A", "O"};
+  vector<string> arr = {"h", "s", "u", "y", "A"};
   reverse(arr.begin(), arr.end());
   for (const string &s : arr)
   {
