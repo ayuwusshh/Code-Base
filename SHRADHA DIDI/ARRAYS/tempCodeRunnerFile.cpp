@@ -1,0 +1,1 @@
+  int currentSum = 0;
