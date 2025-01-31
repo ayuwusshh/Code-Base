@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+body {
+  background-color: #292b2e;
+  color: #ffffff;
+}
+
+.app-title {
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
