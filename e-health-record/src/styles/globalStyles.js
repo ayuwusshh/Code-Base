@@ -9,6 +9,10 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: #f5f5f5;
+    /* Add these to ensure full height */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 `;
 

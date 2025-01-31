@@ -1,3 +1,4 @@
+//Record.jsx
 import { Container, Typography, Paper } from "@mui/material";
 
 function Records() {
