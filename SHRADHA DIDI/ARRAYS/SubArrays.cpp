@@ -22,7 +22,9 @@
 using namespace std;
 int main()
 {
-  int arr[] = {1, 2, 3, 4, 5, 6};
+  //  int arr[] = {1, 2, 3, 4, 5, 6};
+  int arr[] = {2, 7, 11, 15};
+  // int n = 6;
   int n = 6;
   for (int st = 0; st < n; st++)
   {

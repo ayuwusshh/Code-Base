@@ -1,1 +1,1 @@
-  int currentSum = 0;
+#include <iostream>
