@@ -4,6 +4,7 @@ int main()
 {
   int a = 10;
   int *ptr = &a;
-  cout << &a << endl;
-  cout << ptr;
+  cout << ptr << endl;
+  cout << &a;
+  return 0;
 }
