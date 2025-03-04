@@ -9,7 +9,7 @@ int main()
   vec.push_back(2);
   vec.push_back(3);
   cout << "Size before popping =" << vec.size() << endl;
-  // vec.pop_back();                           // delete 3
+  vec.pop_back();                             // delete 3
   cout << "Size= " << vec.size() << endl;     // gives the size of array(vector)
   cout << "Front is " << vec.front() << endl; // shows the first element
   cout << "Last is " << vec.back() << endl;   // shows the last element
