@@ -32,5 +32,6 @@ int main()
   int n = 5;
   bubbleSort(arr, n);
   printArray(arr, n);
+  cout << "array sorted";
   return 0;
 }
