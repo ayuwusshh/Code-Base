@@ -16,9 +16,11 @@ int main()
   int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
   int n = 8;
   revArray(arr, n);
-  for(int i=0;i<n;i++){
-    cout<<arr[i]<<" ";
+  for (int i = 0; i < n; i++)
+  {
+
+    cout << arr[i] << " ";
   }
-  cout<<endl;
+  cout << endl;
   return 0;
 }
