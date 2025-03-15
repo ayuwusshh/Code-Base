@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "express": "npm:Express@^3.0.1",
-    "Express": "^3.0.1"
-  }
-}
