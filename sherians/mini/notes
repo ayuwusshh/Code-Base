@@ -10,4 +10,8 @@
 3. setting up pulic static files
   app.use(express.static(path.join(__dirname,'public')));
 
+4. Dynamic Routing
+  open browser and type the url you need and press enter
+  create thatr url and send res
+  now add : before the dynamic part of the url
 */
