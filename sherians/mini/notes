@@ -1,0 +1,13 @@
+/*
+1. setting up parsers for the project 
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+
+2. setting up ejs
+  install-> npm i ejs from npm
+  setup ejs as view engine
+
+3. setting up pulic static files
+  app.use(express.static(path.join(__dirname,'public')));
+
+*/
