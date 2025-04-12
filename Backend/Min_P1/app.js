@@ -99,4 +99,4 @@ app.post("/update/:id", isLoggedIn, async (req, res) => {
   let post = await postModel.findOneAndUpdate({ _id: req.params.id }, { content: req.body.content })
   res.redirect("/profile")
 });
-app.listen(3001); 
+app.listen(3000); 
