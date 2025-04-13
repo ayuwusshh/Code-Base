@@ -6,17 +6,14 @@ const postModel = require("./models/post");
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
-const crypto = require("crypto");
+const multerconfig=require('./config/multerconfig')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.set("view engine", "ejs");
-const path = require('path')
-
 app.get("/", (req, res) => {
   res.render("index");
 })
-
 app.post('/register', async (req, res) => {
   let { email, password, username, name, age } = req.body;
   let user = await userModel.findOne({ email })
