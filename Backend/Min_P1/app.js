@@ -6,11 +6,13 @@ const postModel = require("./models/post");
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
-const multerconfig=require('./config/multerconfig')
+const path = require('path')
+const multerconfig = require('./config/multerconfig')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")))
 app.get("/", (req, res) => {
   res.render("index");
 })
