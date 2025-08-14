@@ -25,7 +25,7 @@ int main()
 {
   int arr[] = {3, -4, 5, 4, -1, 7, -8};
   int n = 6;
-  int maxx INT_MIN;
+  int maxx =INT_MIN;
   int currentSum = 0;
   for (int i = 0; i < n; i++)
   {
