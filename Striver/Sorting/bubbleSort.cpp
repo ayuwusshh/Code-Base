@@ -1,16 +1,14 @@
-/*
 #include<iostream>
 using namespace std;
-//send the max element to last
 void bubble_sort(int arr[],int n){
-    for(int i=n-1;i>=0;i--){
-        for(int j=0;j<=i-1;j++){
-            if(arr[j]>arr[j+1]){
-                int temp=arr[j+1];
-                arr[j+1]=arr[j];
-                arr[j]=temp;
-            }
+    for(int i=n-1;i>0;i--){
+        bool swapped=false;
+        for(int j=0;j<i;j++){
+            if(arr[j]>arr[j+1])
+            swap(arr[j],arr[j+1]);
+        swapped=true;
         }
+        if(!swapped) break;
     }
 }
 int main(){
@@ -25,22 +23,4 @@ int main(){
         cout<<arr[i]<<" ";
     }
     return 0;
-}
-*/
-#include<iostream>
-using namespace std;
-void Bubble_sort(int arr,int n){
-    for(int i=n-1;i>=1;i--){
-        for(int j=i;j<i-1;j++){
-            
-        }
-    }
-}
-int main(){
-    int n;
-    cin>>n;
-    int arr[n];
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
 }
