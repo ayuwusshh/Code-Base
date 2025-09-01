@@ -44,5 +44,7 @@
     },
     "liveServer.settings.port": 5501,
     "editor.cursorStyle": "block",
-    "editor.overtypeCursorStyle": "line"
+    "editor.overtypeCursorStyle": "line",
+    "editor.formatOnSave": true,
+    
 }
